@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#092d35">
+  <meta name="description" content="Ayo and Anjie's interactive birthday and anniversary island escape shortlist.">
+  <title>Ayo + Anjie’s Island Escape</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="hero-image" src="./assets/ayo-anjie-island-escape.png" alt="Ayo and Anjie's four-destination island escape collage">
+    <div class="hero-shade"></div>
+    <nav class="nav">
+      <a class="brand" href="#top">A+A</a>
+      <div class="nav-links">
+        <a href="#shortlist">The trips</a>
+        <a href="#compare">Quick compare</a>
+      </div>
+    </nav>
+    <div class="hero-copy" id="top">
+      <p class="eyebrow">Birthday + anniversary escape · 2027</p>
+      <a class="primary-btn" href="#shortlist">See the four trips <span>↓</span></a>
+    </div>
+    <div class="scroll-cue">2 adults · from London</div>
+  </header>
+
+  <main>
+    <section class="controls section" id="shortlist">
+      <div class="controls-head">
+        <div>
+          <p class="eyebrow dark">Tap one for the full gallery</p>
+          <h2>Where are they going?</h2>
+        </div>
+        <div class="budget-control">
+          <label for="budget">Your total budget <output id="budget-output">£2,700</output></label>
+          <input id="budget" type="range" min="1800" max="3200" value="2700" step="100">
+          <div class="range-labels"><span>£1,800</span><span>£3,200</span></div>
+        </div>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter destinations">
+        <button class="filter active" data-filter="all">All four</button>
+        <button class="filter" data-filter="five">Exactly 5 nights</button>
+        <button class="filter" data-filter="luxury">Romantic</button>
+        <button class="filter" data-filter="adventure">Activities</button>
+        <button class="filter" data-filter="value">Best value</button>
+      </div>
+      <div class="destination-grid" id="destination-grid"></div>
+    </section>
+
+    <section class="photo-break section">
+      <button class="front-runner" data-open="mauritius">
+        <img src="./assets/hotels/mauritius/01.webp" alt="Veranda Grand Baie pool">
+        <span><small>Best overall fit</small>Mauritius <b>£2,384</b></span>
+      </button>
+    </section>
+
+    <section class="compare section" id="compare">
+      <div class="compare-head">
+        <div>
+          <p class="eyebrow dark">All prices for two</p>
+          <h2>Quick compare</h2>
+        </div>
+      </div>
+      <div class="comparison-wrap">
+        <table>
+          <thead><tr id="compare-head-row"><th>Detail</th></tr></thead>
+          <tbody id="compare-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="tiny-note section">
+      <strong>Prices checked 4 October 2026.</strong>
+      <span>Confirm baggage, connection times and the exact room before paying.</span>
+    </section>
+  </main>
+
+  <footer>
+    <div><span>Ayo</span><i>+</i><span>Anjie</span></div>
+    <p>Birthday & anniversary island escape · Prices can change.</p>
+  </footer>
+
+  <dialog id="trip-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
